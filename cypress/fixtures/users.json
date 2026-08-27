@@ -1,0 +1,5 @@
+{
+  "Administrator":    { "email": "admin@example.com",    "password": "MotDePasse123" },
+  "Purchase Manager": { "email": "manager@example.com", "password": "MotDePasse1234" },
+  "Standard User":    { "email": "user@example.com",     "password": "MotDePasse1235" }
+}

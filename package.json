@@ -1,0 +1,31 @@
+{
+  "name": "bank-transfer-e2e",
+  "version": "1.0.0",
+  "description": "E2E test suite (Cypress + Cucumber) validating bank transfer creation: business rules, boundary values and role-based access control.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "cucumber",
+    "gherkin",
+    "bdd",
+    "e2e",
+    "qa",
+    "test-automation"
+  ],
+  "author": "mma2803",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^26.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^15.21.0",
+    "esbuild": "^0.28.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/**/*.steps.{js,ts}"
+  }
+}

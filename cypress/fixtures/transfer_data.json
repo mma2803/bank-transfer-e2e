@@ -1,0 +1,198 @@
+{
+    "happy_path": {
+        "valid_instant": {
+            "beneficiary_name": "Sara Rose",
+            "iban": "FR7630006000011234567890189",
+            "label": "Rent payment",
+            "amount": 2500.5,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "valid_scheduled": {
+            "beneficiary_name": "Sara Tulip",
+            "iban": "FR7630006000011234567890189",
+            "label": "Salary",
+            "amount": 534,
+            "transfer_mode": "Scheduled",
+            "transfer_date": "TOMORROW"
+        }
+    },
+    "unhappy_path": {
+        "label_with_special_chars": {
+            "beneficiary_name": "Sara Lily",
+            "iban": "FR7630006000011234567890189",
+            "label": "Salary#$54",
+            "amount": 1200,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "iban_non_alphanumeric": {
+            "beneficiary_name": "Sara Zinnia",
+            "iban": "FR76-6000-1234-5678",
+            "label": "NonAlphaIban",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "missing_beneficiary": {
+            "beneficiary_name": "",
+            "iban": "FR7630006000011234567890189",
+            "label": "MissingBeneficiary",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "missing_iban": {
+            "beneficiary_name": "Sara Aster",
+            "iban": "",
+            "label": "MissingIban",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "missing_label": {
+            "beneficiary_name": "Sara Holly",
+            "iban": "FR7630006000011234567890189",
+            "label": "",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "missing_amount": {
+            "beneficiary_name": "Sara Lotus",
+            "iban": "FR7630006000011234567890189",
+            "label": "MissingAmount",
+            "amount": null,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "missing_date_scheduled": {
+            "beneficiary_name": "Sara Magnolia",
+            "iban": "FR7630006000011234567890189",
+            "label": "MissingDate",
+            "amount": 100,
+            "transfer_mode": "Scheduled",
+            "transfer_date": null
+        }
+    },
+    "boundary_amount": {
+        "amount_below_min": {
+            "beneficiary_name": "Sara Daisy",
+            "iban": "FR7630006000011234567890189",
+            "label": "Below Min Amount Test",
+            "amount": 0,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "amount_min_valid": {
+            "beneficiary_name": "Sara Iris",
+            "iban": "FR7630006000011234567890189",
+            "label": "Min Amount Test",
+            "amount": 0.01,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "amount_max_valid": {
+            "beneficiary_name": "Sara Jasmine",
+            "iban": "FR7630006000011234567890189",
+            "label": "Max Amount Test",
+            "amount": 100000,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "amount_above_max": {
+            "beneficiary_name": "Sara Poppy",
+            "iban": "FR7630006000011234567890189",
+            "label": "Above Max Amount Test",
+            "amount": 100000.01,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        }
+    },
+    "boundary_iban": {
+        "iban_below_min": {
+            "beneficiary_name": "Sara Violet",
+            "iban": "NO931234567AB",
+            "label": "Below Min Iban Test",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "iban_min_valid": {
+            "beneficiary_name": "Sara Orchid",
+            "iban": "NO9312345678AB",
+            "label": "Min Iban Test",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "iban_max_valid": {
+            "beneficiary_name": "Sara Lavender",
+            "iban": "LC80HEBA00000000000000000123456789",
+            "label": "Max Valid Iban Test",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "iban_above_max": {
+            "beneficiary_name": "Sara Marigold",
+            "iban": "LC80HEBA000000000000000001234567890",
+            "label": "Above Max Iban Test",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        }
+    },
+    "boundary_date": {
+        "date_min_valid": {
+            "beneficiary_name": "Sara Dahlia",
+            "iban": "FR7630006000011234567890189",
+            "label": "Min Valid Date Test",
+            "amount": 100,
+            "transfer_mode": "Scheduled",
+            "transfer_date": "TOMORROW"
+        },
+        "date_max_valid": {
+            "beneficiary_name": "Sara Peony",
+            "iban": "FR7630006000011234567890189",
+            "label": "Max Valid Date Test",
+            "amount": 100,
+            "transfer_mode": "Scheduled",
+            "transfer_date": "TODAY+90"
+        },
+        "date_below_min": {
+            "beneficiary_name": "Sara Fern",
+            "iban": "FR7630006000011234567890189",
+            "label": "Below Min Date Test",
+            "amount": 100,
+            "transfer_mode": "Scheduled",
+            "transfer_date": "TODAY"
+        },
+        "date_above_max": {
+            "beneficiary_name": "Sara Ivy",
+            "iban": "FR7630006000011234567890189",
+            "label": "Above Max Date Test",
+            "amount": 100,
+            "transfer_mode": "Scheduled",
+            "transfer_date": "TODAY+91"
+        }
+    },
+    "boundary_label": {
+        "label_max_valid": {
+            "beneficiary_name": "Sara Clover",
+            "iban": "FR7630006000011234567890189",
+            "label": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        },
+        "label_above_max": {
+            "beneficiary_name": "Sara Heather",
+            "iban": "FR7630006000011234567890189",
+            "label": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "amount": 100,
+            "transfer_mode": "Instant",
+            "transfer_date": null
+        }
+    }
+}
